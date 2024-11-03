@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .task-adder{
+            display: flex;
+            align-items: center;
+            width: 300px;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .task-adder input{
+            padding: 10px;
+            border-radius: 5px;
+            border: 0.5px solid #333;
+        }
+        .task-adder input:focus{
+            transition: 0.1s all;
+            outline: 3px solid cornflowerblue;
+            outline-offset: 0px;
+            border: 0.5px solid cornflowerblue;
+        }
+        .task-adder button{
+            padding: 10px;
+            transition: 0.3s;
+            border: none;
+            background: #45e;
+            color: #fff;
+            border-radius: 10px;
+        }
+        .task-adder button:active{
+            transform: scale(0.9);
+            background: #354ab3;
+        }
+        .tasks{
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .tasks li{
+            width: 100%;
+            padding: 10px 20px;
+            background: #eee;
+            border-radius: 5px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="task-adder">
+        <input type="text" id="input" placeholder="Add task">
+        <button id="taskAdderBtn">Add new Task</button>
+    </div>
+    <p class="forErrors"></p>
+    <ul class="tasks"></ul>
+
+    <script src="./app.js"></script>
+</body>
+</html>
